@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TickZen – Privacy Policy</title>
+<style>
+  :root {
+    --black:   #000000;
+    --s900:    #0D0D0F;
+    --s800:    #141418;
+    --s700:    #1C1C22;
+    --purple:  #7C6FF7;
+    --purple2: #9D98F5;
+    --purple3: #BEBAF8;
+    --text1:   #F0EFF5;
+    --text2:   #9896A8;
+    --text3:   #5C5A6E;
+    --teal:    #4DD9AC;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--text1);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── Header ── */
+  header {
+    background: var(--s900);
+    border-bottom: 0.5px solid var(--s700);
+    padding: 0 24px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  .header-inner {
+    max-width: 720px;
+    margin: 0 auto;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .app-icon {
+    width: 32px;
+    height: 32px;
+    background: var(--s700);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .app-icon svg { width: 18px; height: 18px; }
+  .app-name {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text1);
+    letter-spacing: -0.01em;
+  }
+  .app-name span { color: var(--purple); }
+
+  /* ── Hero ── */
+  .hero {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 64px 24px 48px;
+  }
+  .hero-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: var(--purple);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .hero h1 {
+    font-size: clamp(28px, 5vw, 40px);
+    font-weight: 300;
+    letter-spacing: -0.03em;
+    color: var(--text1);
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+  .hero h1 em {
+    font-style: normal;
+    color: var(--purple);
+  }
+  .hero-sub {
+    font-size: 15px;
+    color: var(--text2);
+    max-width: 520px;
+    line-height: 1.6;
+  }
+  .updated-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 24px;
+    background: var(--s800);
+    border: 0.5px solid var(--s700);
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 12px;
+    color: var(--text3);
+  }
+  .updated-pill .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--teal);
+  }
+
+  /* ── Summary bar ── */
+  .summary-bar {
+    max-width: 720px;
+    margin: 0 auto 8px;
+    padding: 0 24px;
+  }
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+  .summary-card {
+    background: var(--s900);
+    border: 0.5px solid var(--s700);
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+  }
+  .summary-icon {
+    font-size: 22px;
+    margin-bottom: 6px;
+    display: block;
+  }
+  .summary-card strong {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text1);
+    margin-bottom: 2px;
+  }
+  .summary-card span {
+    font-size: 11px;
+    color: var(--text3);
+  }
+
+  /* ── Content ── */
+  .content {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+
+  .section {
+    margin-bottom: 48px;
+  }
+
+  .section-num {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: var(--purple);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .section h2 {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text1);
+    letter-spacing: -0.02em;
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+    border-bottom: 0.5px solid var(--s700);
+  }
+
+  .section p {
+    color: var(--text2);
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+  }
+  .section p:last-child { margin-bottom: 0; }
+
+  .section ul {
+    list-style: none;
+    margin: 12px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .section ul li {
+    font-size: 15px;
+    color: var(--text2);
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.6;
+  }
+  .section ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--purple);
+    opacity: 0.6;
+  }
+
+  .highlight-box {
+    background: var(--s900);
+    border: 0.5px solid var(--s700);
+    border-left: 2px solid var(--purple);
+    border-radius: 0 10px 10px 0;
+    padding: 14px 16px;
+    margin: 16px 0;
+    font-size: 14px;
+    color: var(--text2);
+    line-height: 1.6;
+  }
+  .highlight-box strong { color: var(--purple2); font-weight: 500; }
+
+  /* ── Contact ── */
+  .contact-card {
+    background: var(--s900);
+    border: 0.5px solid var(--s700);
+    border-radius: 14px;
+    padding: 24px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .contact-icon {
+    width: 40px;
+    height: 40px;
+    background: var(--s700);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 18px;
+  }
+  .contact-card h3 {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text1);
+    margin-bottom: 4px;
+  }
+  .contact-card p {
+    font-size: 13px;
+    color: var(--text2);
+    margin: 0;
+  }
+  .contact-card a {
+    color: var(--purple2);
+    text-decoration: none;
+  }
+  .contact-card a:hover { text-decoration: underline; }
+
+  /* ── Footer ── */
+  footer {
+    border-top: 0.5px solid var(--s700);
+    padding: 24px;
+    text-align: center;
+  }
+  footer p {
+    font-size: 12px;
+    color: var(--text3);
+  }
+  footer span { color: var(--purple); }
+
+  /* ── Divider ── */
+  .divider {
+    height: 0.5px;
+    background: var(--s700);
+    margin: 40px 0;
+  }
+
+  /* ── Responsive ── */
+  @media (max-width: 520px) {
+    .summary-grid { grid-template-columns: 1fr; }
+    .hero { padding: 40px 20px 32px; }
+    .content { padding: 32px 20px 60px; }
+    .summary-bar { padding: 0 20px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="header-inner">
+    <div class="app-icon">
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="16" cy="16" r="11" stroke="#7C6FF7" stroke-width="1.5"/>
+        <path d="M16 9V16L20.5 18.5" stroke="#F0EFF5" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="16" cy="16" r="1.5" fill="#7C6FF7"/>
+      </svg>
+    </div>
+    <span class="app-name">Tick<span>Zen</span></span>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <p class="hero-label">Legal</p>
+  <h1>We don't collect<br><em>your data.</em> Period.</h1>
+  <p class="hero-sub">
+    TickZen is a local-first app. Your tasks, sessions, and focus history
+    live entirely on your device. Nothing is ever sent to a server,
+    sold to advertisers, or shared with anyone.
+  </p>
+  <div class="updated-pill">
+    <span class="dot"></span>
+    Last updated — June 2026
+  </div>
+</section>
+
+<!-- Summary cards -->
+<div class="summary-bar">
+  <div class="summary-grid">
+    <div class="summary-card">
+      <span class="summary-icon">🔒</span>
+      <strong>No data collected</strong>
+      <span>Everything stays on your device</span>
+    </div>
+    <div class="summary-card">
+      <span class="summary-icon">🚫</span>
+      <strong>No ads, ever</strong>
+      <span>No ad SDKs or trackers</span>
+    </div>
+    <div class="summary-card">
+      <span class="summary-icon">📵</span>
+      <strong>No account needed</strong>
+      <span>No sign-up, no email</span>
+    </div>
+  </div>
+</div>
+
+<!-- Main content -->
+<main class="content">
+
+  <div class="section">
+    <p class="section-num">01</p>
+    <h2>Overview</h2>
+    <p>
+      This Privacy Policy applies to the TickZen app for Android,
+      developed by Lunar Eternal. We built TickZen to be a focused,
+      private productivity tool. That philosophy extends to how we
+      treat your data — which is to say, we don't touch it.
+    </p>
+    <div class="highlight-box">
+      <strong>Plain English version:</strong> TickZen has no backend,
+      no analytics SDK, no crash reporter, no ad network, and no login system.
+      The app cannot send your data anywhere because it has no mechanism to do so.
+    </div>
+  </div>
+
+  <div class="section">
+    <p class="section-num">02</p>
+    <h2>Information We Collect</h2>
+    <p>We collect <strong style="color: var(--text1)">nothing</strong>. Here is a full list of
+    data TickZen stores and where it lives:</p>
+    <ul>
+      <li><strong style="color:var(--text1)">Your tasks</strong> — stored locally in an on-device SQLite database. Never leaves your phone.</li>
+      <li><strong style="color:var(--text1)">Session history</strong> — focus session logs stored locally for your stats screen. Never uploaded.</li>
+      <li><strong style="color:var(--text1)">App preferences</strong> — timer durations, sound settings, and other preferences stored in Android DataStore on your device.</li>
+      <li><strong style="color:var(--text1)">Streak and stats data</strong> — computed entirely from your local session history. No cloud involvement.</li>
+    </ul>
+    <p>
+      None of this data is transmitted, backed up to our servers, or
+      accessible to us in any way. We have no servers that receive
+      data from the app.
+    </p>
+  </div>
+
+  <div class="section">
+    <p class="section-num">03</p>
+    <h2>Permissions We Request</h2>
+    <p>TickZen requests the following Android permissions and only
+    uses them for the stated purpose:</p>
+    <ul>
+      <li>
+        <strong style="color:var(--text1)">POST_NOTIFICATIONS</strong> —
+        to show the persistent timer notification with pause and reset controls
+        while a session is running. No marketing notifications are ever sent.
+      </li>
+      <li>
+        <strong style="color:var(--text1)">FOREGROUND_SERVICE</strong> —
+        to keep the timer running accurately when you switch apps or
+        lock your screen.
+      </li>
+      <li>
+        <strong style="color:var(--text1)">VIBRATE</strong> —
+        to vibrate your device when a session completes.
+      </li>
+      <li>
+        <strong style="color:var(--text1)">WAKE_LOCK</strong> —
+        to ensure the timer continues in the background without
+        being killed by battery optimisation.
+      </li>
+      <li>
+        <strong style="color:var(--text1)">RECEIVE_BOOT_COMPLETED</strong> —
+        reserved for a future update that will restore an active timer
+        after device restart.
+      </li>
+      <li>
+        <strong style="color:var(--text1)">INTERNET</strong> —
+        used only to download the Space Grotesk font from Google Fonts
+        on first launch. No user data is sent. This can be revoked
+        after the font has been cached.
+      </li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <p class="section-num">04</p>
+    <h2>Third-Party Services</h2>
+    <p>TickZen uses one third-party service:</p>
+    <ul>
+      <li>
+        <strong style="color:var(--text1)">Google Fonts (via Google Play Services)</strong> —
+        the app downloads the Space Grotesk typeface from Google's font
+        delivery infrastructure on first launch. This request is made
+        by the Android system font framework, not by TickZen directly.
+        Google's own privacy policy governs this request. No user
+        data specific to TickZen is included in this request.
+      </li>
+    </ul>
+    <p>
+      There are no analytics SDKs (no Firebase Analytics, no Mixpanel,
+      no Amplitude). There are no crash reporting SDKs (no Crashlytics,
+      no Sentry). There are no advertising SDKs. There are no social
+      login SDKs.
+    </p>
+  </div>
+
+  <div class="section">
+    <p class="section-num">05</p>
+    <h2>Children's Privacy</h2>
+    <p>
+      TickZen is not directed at children under the age of 13.
+      We do not knowingly collect any personal information from
+      children. Since we collect no personal information from anyone,
+      this applies universally — there is simply no data to collect
+      regardless of the user's age.
+    </p>
+  </div>
+
+  <div class="section">
+    <p class="section-num">06</p>
+    <h2>Data Security</h2>
+    <p>
+      All data created by TickZen is stored using Android's standard
+      app-sandboxed storage. It is protected by your device's built-in
+      security — screen lock, encryption, and Android's permission model.
+      We cannot access this data remotely, and neither can any third party
+      through TickZen.
+    </p>
+    <p>
+      If you uninstall TickZen, all locally stored data is permanently
+      deleted by Android. There is no cloud backup to retrieve it from.
+    </p>
+  </div>
+
+  <div class="section">
+    <p class="section-num">07</p>
+    <h2>Changes to This Policy</h2>
+    <p>
+      If we ever change this privacy policy — for example, if a future
+      version of TickZen introduces optional cloud sync or a subscription
+      system — we will update this page and change the "last updated"
+      date at the top. We will also notify users via an in-app notice
+      on the first launch after the change.
+    </p>
+    <p>
+      We will never introduce data collection practices that contradict
+      the core principle of this policy without explicit user consent.
+    </p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section">
+    <p class="section-num">08</p>
+    <h2>Contact</h2>
+    <p>Questions about this privacy policy? Reach out directly.</p>
+    <div class="contact-card">
+      <div class="contact-icon">✉️</div>
+      <div>
+        <h3>Lunar Eternal</h3>
+        <p>
+          Developer of TickZen<br>
+          <a href="mailto:privacy@lunaeternal.com">privacy@lunaeternal.com</a><br>
+          <a href="https://lunaeternal.com" target="_blank" rel="noopener">lunaeternal.com</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- Footer -->
+<footer>
+  <p>© 2026 <span>Lunar Eternal</span> · TickZen · All rights reserved</p>
+  <p style="margin-top:6px">This policy was last updated June 2026</p>
+</footer>
+
+</body>
+</html>
